@@ -1,6 +1,6 @@
 {
     "name": "nvm-global-installs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Get the globally installed packages for any nvm-selectable version.",
     "repository": "https://github.com/Richienb/nvm-global-installs.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
