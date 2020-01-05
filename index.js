@@ -10,7 +10,7 @@ const readFolders = require("./lib/read-folders")
 const getPackageDirectory = require("./lib/get-package-directory")
 
 module.exports = async (version) => {
-    if (!await nvmExists()) return []
+    if (!await nvmExists()) return {}
 
     const pkgDir = await getPackageDirectory()
     let versions = await readFolders(pkgDir)
