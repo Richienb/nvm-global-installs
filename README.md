@@ -1,41 +1,48 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# NVM Global Installs [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/nvm-global-installs/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/nvm-global-installs)
 
-My awesome module.
+Get the globally installed packages for any nvm-selectable version.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/nvm-global-installs.png)](https://npmjs.com/package/nvm-global-installs)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install nvm-global-installs
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const nvmGlobalInstalls = require("nvm-global-installs");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+nvmGlobalInstalls("v13.5.0");
+//=> { 'v13.5.0': { npm: '6.13.4', yarn: '1.21.1' } }
 ```
 
 ## API
 
-### theModule(input, options?)
+### nvmGlobalInstalls(version?)
 
-#### input
+#### version
 
 Type: `string`
 
-Lorem ipsum.
+The version to get the globally installed packages for.
 
-#### options
+## CLI Usage
 
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+```sh
+$ ngi
+\ Traversing dependencies
+├─ v0.10.48
+│  └─ npm
+├─ v12.14.0
+│  ├─ active-win
+│  ├─ npm
+│  ├─ windows-build-tools
+│  └─ yarn
+└─ v13.5.0
+   ├─ ngi
+   ├─ npm
+   └─ yarn
+```

@@ -1,14 +1,20 @@
+declare interface Result {
+    [version: string]: {
+        [package: string]: string
+    }
+}
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Get the globally installed packages for any nvm-selectable version.
+ * @param version The version to get the globally installed packages for.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const nvmGlobalInstalls = require("nvm-global-installs");
+ *
+ * nvmGlobalInstalls("v13.5.0");
+ * //=> { 'v13.5.0': { npm: '6.13.4', yarn: '1.21.1' } }
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function nvmGlobalInstalls(version?: string | string[]): Result;
 
-export = theModule;
+export = nvmGlobalInstalls;

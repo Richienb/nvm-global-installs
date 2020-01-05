@@ -1,25 +1,55 @@
 {
-    "name": "the-module",
+    "name": "nvm-global-installs",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Get the globally installed packages for any nvm-selectable version.",
+    "repository": "https://github.com/Richienb/nvm-global-installs.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
     "files": [
         "index.js",
-        "index.d.ts"
+        "index.d.ts",
+        "cli.js",
+        "lib/**/*"
     ],
+    "bin": {
+        "ngi": "./cli"
+    },
     "engines": {
-        "node": ">=8"
+        "node": ">=10"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "nvm",
+        "package",
+        "global",
+        "install",
+        "node",
+        "cli",
+        "package",
+        "directory",
+        "exists",
+        "version",
+        "npm"
+    ],
+    "dependencies": {
+        "chalk": "^3.0.0",
+        "command-exists": "^1.2.8",
+        "execa": "^4.0.0",
+        "fs-extra": "^8.1.0",
+        "lodash": "^4.17.15",
+        "meow": "^6.0.0",
+        "ora": "^4.0.3",
+        "p-map": "^3.0.0",
+        "read-pkg": "^5.2.0",
+        "split-on-first": "^2.0.0",
+        "treeify": "^1.1.0"
+    },
     "devDependencies": {
+        "@sindresorhus/is": "^1.2.0",
         "ava": "^2.4.0",
         "eslint-config-richienb": "^0.2.3",
         "xo": "^0.25.3"
