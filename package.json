@@ -36,7 +36,7 @@
         "npm"
     ],
     "dependencies": {
-        "chalk": "^3.0.0",
+        "chalk": "^4.0.0",
         "command-exists": "^1.2.8",
         "execa": "^4.0.0",
         "fs-extra": "^8.1.0",
